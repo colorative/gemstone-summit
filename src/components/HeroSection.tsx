@@ -55,7 +55,7 @@ const HeroSection = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-display"
+              className="border-primary-foreground/30 text-secondary-foreground hover:bg-primary-foreground/10 font-display"
               onClick={() => document.getElementById("learn")?.scrollIntoView({ behavior: "smooth" })}
             >
               What You'll Learn
