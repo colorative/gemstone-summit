@@ -58,7 +58,7 @@ const Header = () => {
         <div className="flex items-center gap-3">
           <Button
             size="sm"
-            className="gold-gradient text-accent-foreground font-display font-semibold px-6 hover:opacity-90 transition-opacity"
+            className="gold-gradient text-accent-foreground font-display font-medium uppercase px-6 hover:opacity-90 transition-opacity"
           >
             Register
           </Button>
