@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# Gemstone Lights Dealer Summit 2026
 
-TODO: Document your project here
+Gemstone Lights Dealer Summit 2026 — June 22-25, Calgary AB. 4 days of training, networking, and product updates for dealers.
