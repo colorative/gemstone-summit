@@ -20,7 +20,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-display font-semibold tracking-widest uppercase gold-gradient text-accent-foreground mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-md text-xs font-display font-medium tracking-widest uppercase gold-gradient text-accent-foreground mb-6">
             Dealer Summit 2026
           </span>
 
@@ -48,7 +48,7 @@ const HeroSection = () => {
           <div className="flex flex-wrap gap-4 justify-center mt-10">
             <Button
               size="lg"
-              className="gold-gradient text-accent-foreground font-display font-semibold px-8 hover:opacity-90 transition-opacity gold-glow"
+              className="gold-gradient text-accent-foreground font-display font-medium uppercase px-8 hover:opacity-90 transition-opacity gold-glow"
               onClick={() => document.getElementById("agenda")?.scrollIntoView({ behavior: "smooth" })}
             >
               View Agenda
@@ -56,7 +56,7 @@ const HeroSection = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-display"
+              className="border-primary-foreground/30 text-foreground bg-background hover:bg-background/90 font-display uppercase"
               onClick={() => document.getElementById("learn")?.scrollIntoView({ behavior: "smooth" })}
             >
               What You'll Learn
