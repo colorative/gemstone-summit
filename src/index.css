@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,44 +6,44 @@
 
 @layer base {
   :root {
-    --background: 220 20% 97%;
-    --foreground: 222 30% 12%;
+    --background: 0 0% 98%;
+    --foreground: 210 20% 16%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 30% 12%;
+    --card-foreground: 210 20% 16%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 30% 12%;
+    --popover-foreground: 210 20% 16%;
 
-    --primary: 222 47% 14%;
-    --primary-foreground: 45 100% 96%;
+    --primary: 197 73% 52%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 16% 92%;
-    --secondary-foreground: 222 30% 12%;
+    --secondary: 200 15% 93%;
+    --secondary-foreground: 210 20% 16%;
 
-    --muted: 220 16% 94%;
-    --muted-foreground: 220 10% 46%;
+    --muted: 200 12% 94%;
+    --muted-foreground: 210 8% 46%;
 
-    --accent: 38 92% 55%;
-    --accent-foreground: 222 47% 14%;
+    --accent: 197 73% 52%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 16% 88%;
-    --input: 220 16% 88%;
-    --ring: 38 92% 55%;
+    --border: 210 14% 89%;
+    --input: 210 14% 89%;
+    --ring: 197 73% 52%;
 
     --radius: 0.75rem;
 
-    --hero-gradient: linear-gradient(135deg, hsl(222 47% 14%) 0%, hsl(222 35% 22%) 50%, hsl(240 20% 18%) 100%);
-    --gold-gradient: linear-gradient(135deg, hsl(38 92% 55%) 0%, hsl(45 100% 65%) 50%, hsl(38 80% 50%) 100%);
-    --gold-glow: 0 0 40px hsl(38 92% 55% / 0.3);
-    --card-shadow: 0 4px 24px -4px hsl(222 30% 12% / 0.08);
-    --card-shadow-hover: 0 8px 32px -4px hsl(222 30% 12% / 0.14);
+    --hero-gradient: linear-gradient(135deg, hsl(210 25% 12%) 0%, hsl(200 30% 18%) 50%, hsl(197 40% 22%) 100%);
+    --gold-gradient: linear-gradient(135deg, hsl(197 73% 52%) 0%, hsl(197 80% 62%) 50%, hsl(197 65% 45%) 100%);
+    --gold-glow: 0 0 40px hsl(197 73% 52% / 0.3);
+    --card-shadow: 0 4px 24px -4px hsl(210 20% 16% / 0.08);
+    --card-shadow-hover: 0 8px 32px -4px hsl(210 20% 16% / 0.14);
 
-    --font-display: 'Space Grotesk', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --font-display: 'Oswald', sans-serif;
+    --font-body: 'Poppins', sans-serif;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -56,25 +56,25 @@
   }
 
   .dark {
-    --background: 222 30% 8%;
-    --foreground: 220 20% 95%;
-    --card: 222 25% 12%;
-    --card-foreground: 220 20% 95%;
-    --popover: 222 25% 12%;
-    --popover-foreground: 220 20% 95%;
-    --primary: 38 92% 55%;
-    --primary-foreground: 222 47% 14%;
-    --secondary: 222 20% 18%;
-    --secondary-foreground: 220 20% 95%;
-    --muted: 222 20% 18%;
-    --muted-foreground: 220 10% 60%;
-    --accent: 38 92% 55%;
-    --accent-foreground: 222 47% 14%;
+    --background: 210 25% 8%;
+    --foreground: 200 15% 95%;
+    --card: 210 22% 12%;
+    --card-foreground: 200 15% 95%;
+    --popover: 210 22% 12%;
+    --popover-foreground: 200 15% 95%;
+    --primary: 197 73% 52%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 18% 18%;
+    --secondary-foreground: 200 15% 95%;
+    --muted: 210 18% 18%;
+    --muted-foreground: 200 10% 60%;
+    --accent: 197 73% 52%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 222 20% 20%;
-    --input: 222 20% 20%;
-    --ring: 38 92% 55%;
+    --border: 210 18% 20%;
+    --input: 210 18% 20%;
+    --ring: 197 73% 52%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;

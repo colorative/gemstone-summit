@@ -2,15 +2,16 @@ import { motion } from "framer-motion";
 import { MapPin, CalendarDays } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import CountdownTimer from "./CountdownTimer";
-import heroBg from "@/assets/hero-bg.jpg";
+
+const HERO_BG = "https://auroraskylighting.com/wp-content/uploads/2025/08/Aurora-Sky-043025-68-scaled.webp";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background image */}
       <div className="absolute inset-0">
-        <img src={heroBg} alt="Calgary skyline" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 hero-gradient opacity-85" />
+        <img src={HERO_BG} alt="Outdoor lighting installation" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 hero-gradient opacity-80" />
       </div>
 
       <div className="relative z-10 container max-w-4xl mx-auto px-4 text-center py-32">
@@ -55,7 +56,7 @@ const HeroSection = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-primary-foreground/30 text-secondary-foreground hover:bg-primary-foreground/10 font-display"
+              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-display"
               onClick={() => document.getElementById("learn")?.scrollIntoView({ behavior: "smooth" })}
             >
               What You'll Learn
