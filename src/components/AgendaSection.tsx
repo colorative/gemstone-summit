@@ -17,6 +17,7 @@ interface Track {
 
 interface DayData {
   label: string;
+  weekday: string;
   subtitle: string;
   tracks: Track[];
   note?: string;
@@ -25,11 +26,11 @@ interface DayData {
 const days: DayData[] = [
   {
     label: "Day 1",
+    weekday: "Mon",
     subtitle: "Mon, June 22 — Welcome",
     tracks: [
       {
         name: "All Attendees",
-        icon: <Users className="w-4 h-4" />,
         items: [
           { time: "1:00 – 4:00 PM", session: "Registration & Welcome Reception (Marriott, Legacy Room) — Optional Facility Tours", type: "session" },
           { time: "5:30 PM", session: "Bus Pickup – Rooftop YYC", type: "transport" },
@@ -44,113 +45,51 @@ const days: DayData[] = [
   },
   {
     label: "Day 2",
+    weekday: "Tue",
     subtitle: "Tue, June 23 — Core Sessions",
     tracks: [
       {
         name: "Business Owners & Sales",
-        icon: <Users className="w-4 h-4" />,
         items: [
           { time: "8:00 – 9:00", session: "Breakfast", type: "meal" },
-          { time: "9:00 – 9:30", session: "Welcome Remarks / Icebreaker", type: "session" },
-          { time: "9:30 – 10:15", session: "Dealer Marketing Support", type: "session" },
-          { time: "10:15 – 10:30", session: "Break", type: "break" },
           { time: "10:30 – 11:15", session: "Marketing & Lead Generation", type: "session" },
-          { time: "11:15 – 12:00", session: "Dealer Spotlight", type: "session" },
-          { time: "12:00 – 1:00", session: "Lunch", type: "meal" },
-          { time: "1:00 – 1:15", session: "Marketing Recap", type: "session" },
-          { time: "1:15 – 2:15", session: "Own Your Market – SEO & Digital Presence", type: "session" },
-          { time: "2:15 – 2:30", session: "Break", type: "break" },
           { time: "2:30 – 3:30", session: "Sales & Negotiating Techniques", type: "session" },
-          { time: "3:30 – 4:00", session: "Dealer Spotlight", type: "session" },
-          { time: "4:00 – 4:45", session: "Product Development", type: "session" },
-          { time: "4:45 – 5:00", session: "Closing Remarks", type: "session" },
         ],
       },
       {
         name: "Installers",
-        icon: <Users className="w-4 h-4" />,
         items: [
-          { time: "8:00 – 9:00", session: "Breakfast", type: "meal" },
-          { time: "9:00 – 9:30", session: "Welcome & Orientation", type: "session" },
-          { time: "9:30 – 10:00", session: "System Overview", type: "session" },
-          { time: "10:00 – 11:00", session: "Field Install Overview", type: "session" },
-          { time: "11:15 – 11:45", session: "Shuttle to Site", type: "transport" },
-          { time: "12:00 – 1:00", session: "Lunch", type: "meal" },
+          { time: "10:30 – 11:15", session: "Marketing & Lead Generation", type: "session" },
           { time: "1:00 – 4:00", session: "Field Training & Installation Sessions", type: "session" },
-          { time: "4:30 – 5:00", session: "Shuttle back to Marriott", type: "transport" },
-        ],
-      },
-      {
-        name: "Evening — All Attendees",
-        icon: <Dumbbell className="w-4 h-4" />,
-        items: [
-          { time: "5:00 – 6:00 PM", session: "Dinner", type: "meal" },
-          { time: "6:00 PM", session: "Shuttle to Pickleball Facility", type: "transport" },
-          { time: "6:30 – 8:30 PM", session: "Pickleball", type: "activity" },
-          { time: "8:30 PM", session: "Shuttle back to Marriott", type: "transport" },
-          { time: "9:00 – 10:00 PM", session: "Community Tour (Optional)", type: "activity" },
         ],
       },
     ],
   },
   {
     label: "Day 3",
+    weekday: "Wed",
     subtitle: "Wed, June 24 — Deep Dives",
-    note: "* Operational Efficiency — All Attendees together (1:00 – 2:00 PM)",
     tracks: [
       {
-        name: "Business Owners & Sales",
-        icon: <Users className="w-4 h-4" />,
+        name: "Business Strategy",
         items: [
-          { time: "8:00 – 9:00", session: "Breakfast", type: "meal" },
-          { time: "9:00 – 9:15", session: "Field Day Debrief", type: "session" },
           { time: "9:15 – 10:00", session: "Material Cost & Profitability", type: "session" },
-          { time: "10:00 – 10:45", session: "Shuttle to Site (last bus 10:15)", type: "transport" },
-          { time: "11:00 – 12:00", session: "Walkthrough of Installation Project", type: "session" },
-          { time: "12:00 – 1:00", session: "Lunch", type: "meal" },
           { time: "1:00 – 2:00", session: "Operational Efficiency *", type: "session" },
-          { time: "2:00 – 2:15", session: "Break", type: "break" },
-          { time: "2:15 – 2:45", session: "Working with Homebuilders", type: "session" },
-          { time: "2:45 – 3:15", session: "App Demo", type: "session" },
-          { time: "3:15 – 3:45", session: "Join a Breakout Session", type: "session" },
-        ],
-      },
-      {
-        name: "Installers",
-        icon: <Users className="w-4 h-4" />,
-        items: [
-          { time: "8:00 – 9:00", session: "Breakfast", type: "meal" },
-          { time: "9:00 – 10:00", session: "Installation Debrief", type: "session" },
-          { time: "10:00 – 10:30", session: "Shuttle to Site", type: "transport" },
-          { time: "10:30 – 12:00", session: "Installation Sessions", type: "session" },
-          { time: "12:00 – 1:00", session: "Lunch", type: "meal" },
-          { time: "1:00 – 2:00", session: "Operational Efficiency *", type: "session" },
-          { time: "2:00 – 4:00", session: "Breakout Sessions (4 x 30 min rotating)", type: "session" },
-          { time: "4:00 – 4:15", session: "Wrap Up", type: "session" },
-        ],
-      },
-      {
-        name: "Evening — All Attendees",
-        icon: <Users className="w-4 h-4" />,
-        items: [
-          { time: "3:45 – 5:30 PM", session: "Panel & Closing Remarks", type: "session" },
-          { time: "6:00 PM", session: "Dinner", type: "meal" },
-          { time: "7:00 – 10:00 PM", session: "Games & Light Up Installation", type: "activity" },
         ],
       },
     ],
   },
   {
     label: "Day 4",
+    weekday: "Thu",
     subtitle: "Thu, June 25 — Mountain Trip",
     tracks: [
       {
-        name: "Mountains & Banff — All Attendees",
-        icon: <Mountain className="w-4 h-4" />,
+        name: "Banff Trip",
         items: [
           { time: "8:00 AM", session: "Shuttle departs Marriott", type: "transport" },
-          { time: "Midday", session: "Lunch on your own (not provided)", type: "meal" },
-          { time: "~6:00 PM", session: "Arrive back at Marriott Courtyard", type: "transport" },
+          { time: "Midday", session: "Lunch in Banff", type: "meal" },
+          { time: "~6:00 PM", session: "Arrive back at Marriott", type: "transport" },
         ],
       },
     ],
@@ -158,118 +97,100 @@ const days: DayData[] = [
 ];
 
 const typeStyles: Record<string, string> = {
-  meal: "bg-accent/15 border-accent/30 text-accent-foreground",
-  break: "bg-muted border-border text-muted-foreground",
-  transport: "bg-secondary border-border text-secondary-foreground",
-  activity: "bg-accent/10 border-accent/20 text-accent-foreground",
-  session: "bg-card border-border text-card-foreground",
-};
-
-const typeIcons: Record<string, React.ReactNode> = {
-  meal: <Utensils className="w-3.5 h-3.5 text-accent" />,
-  break: <Clock className="w-3.5 h-3.5 text-muted-foreground" />,
-  transport: <Bus className="w-3.5 h-3.5 text-muted-foreground" />,
-  activity: <Dumbbell className="w-3.5 h-3.5 text-accent" />,
-  session: <MapPin className="w-3.5 h-3.5 text-foreground" />,
+  meal: "bg-primary/5 border-neutral-100 text-primary",
+  break: "bg-neutral-50 border-neutral-100 text-neutral-400",
+  transport: "bg-neutral-50/50 border-neutral-100 text-neutral-500",
+  activity: "bg-neutral-900 border-neutral-800 text-white",
+  session: "bg-white border-neutral-100 text-neutral-900",
 };
 
 const AgendaSection = () => {
   const [activeDay, setActiveDay] = useState("0");
-
   const currentDay = days[parseInt(activeDay)];
 
   return (
-    <section id="agenda" className="py-20 sm:py-28 bg-background">
-      <div className="container max-w-5xl mx-auto px-4">
+    <section id="agenda" className="pt-12 sm:pt-16 pb-24 sm:pb-32 bg-white antialiased text-neutral-900">
+      <div className="container max-w-6xl mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="mb-12"
         >
-          <span className="text-sm font-display font-semibold tracking-widest uppercase text-accent">
-            The Schedule
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mt-3">
-            4 Days of Learning & Connection
+          <div className="inline-flex items-center gap-4 text-primary mb-4">
+            <div className="h-[1px] w-6 bg-primary" />
+            <span className="text-[11px] font-medium uppercase tracking-widest font-display">Schedule</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-medium text-neutral-900 uppercase tracking-tight leading-tight">
+            THE SUMMIT <span className="text-primary italic">AGENDA</span>
           </h2>
-          <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
-            From hands-on installation training to marketing masterclasses — every session is designed to level up your dealership.
-          </p>
         </motion.div>
 
         <Tabs value={activeDay} onValueChange={setActiveDay} className="w-full">
-          <TabsList className="w-full grid grid-cols-4 mb-8 bg-secondary/50 p-1 rounded-xl h-auto">
+          <TabsList className="mb-10 h-auto p-1 bg-neutral-100 inline-flex items-center rounded-md">
             {days.map((day, i) => (
               <TabsTrigger
                 key={i}
                 value={String(i)}
-                className="font-display text-sm sm:text-base py-3 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-lg transition-all"
+                className="px-6 py-2 h-auto flex flex-col items-center gap-0 data-[state=active]:bg-white data-[state=active]:text-neutral-950 transition-all rounded-md min-w-[100px]"
               >
-                {day.label}
+                <span className="font-display uppercase tracking-wider text-[11px] font-medium leading-tight">{day.label}</span>
+                <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-display font-medium leading-none mt-0.5">{day.weekday}</span>
               </TabsTrigger>
             ))}
           </TabsList>
-        </Tabs>
 
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeDay}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
-            transition={{ duration: 0.25 }}
-          >
-            <p className="text-lg font-display font-semibold text-foreground mb-6">
-              {currentDay.subtitle}
-            </p>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeDay}
+              initial={{ opacity: 0, x: 5 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -5 }}
+              transition={{ duration: 0.2 }}
+              className="space-y-10"
+            >
+              <div className="flex items-center gap-6 border-l-2 border-primary pl-6 py-1">
+                <h3 className="text-2xl font-display font-medium uppercase tracking-tight text-neutral-900">
+                  {currentDay.subtitle}
+                </h3>
+              </div>
 
-            <div className="space-y-8">
-              {currentDay.tracks.map((track, ti) => (
-                <div key={ti}>
-                  <div className="flex items-center gap-2 mb-4">
-                    {track.icon}
-                    <h3 className="font-display font-semibold text-foreground text-sm uppercase tracking-wider">
-                      {track.name}
-                    </h3>
-                  </div>
-                  <div className="space-y-2">
-                    {track.items.map((item, ii) => {
-                      const t = item.type || "session";
-                      return (
-                        <motion.div
-                          key={ii}
-                          initial={{ opacity: 0, y: 8 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: ii * 0.03 }}
-                          className={`flex items-start gap-4 p-3 sm:p-4 rounded-lg border ${typeStyles[t]} transition-shadow hover:card-shadow`}
-                        >
-                          <div className="flex items-center gap-2 min-w-[120px] sm:min-w-[140px] shrink-0">
-                            {typeIcons[t]}
-                            <span className="text-xs sm:text-sm font-medium whitespace-nowrap">
-                              {item.time}
+              <div className="grid gap-10">
+                {currentDay.tracks.map((track, ti) => (
+                  <div key={ti} className="space-y-6">
+                    {track.name !== "All Attendees" && (
+                      <h4 className="font-display font-medium text-neutral-950 text-xs uppercase tracking-[0.2em] border-b border-primary/20 pb-1 w-fit">
+                        {track.name}
+                      </h4>
+                    )}
+                    
+                    <div className="grid gap-1.5">
+                      {track.items.map((item, ii) => {
+                        const t = item.type || "session";
+                        return (
+                          <div
+                            key={ii}
+                            // ENHANCED SOFT GREY HOVER effect per USER REQUEST (hover:bg-neutral-100/50 and border-neutral-200)
+                            className={`flex flex-col sm:flex-row items-start sm:items-center gap-10 p-5 rounded-md border ${typeStyles[t]} hover:border-neutral-200 hover:bg-neutral-100/50 transition-all duration-300 group`}
+                          >
+                            <div className="flex items-center gap-4 min-w-[140px] shrink-0 sm:border-r border-current/10 sm:pr-10">
+                                <span className="text-sm md:text-base font-medium tracking-wider font-display uppercase text-neutral-900 leading-tight group-hover:text-primary transition-colors">
+                                  {item.time}
+                                </span>
+                            </div>
+                            <span className="text-sm md:text-base font-body font-normal text-neutral-700 leading-relaxed">
+                                {item.session}
                             </span>
                           </div>
-                          <span className="text-sm sm:text-base">{item.session}</span>
-                        </motion.div>
-                      );
-                    })}
+                        );
+                      })}
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
-
-            {currentDay.note && (
-              <p className="text-sm text-muted-foreground mt-6 italic">
-                {currentDay.note}
-              </p>
-            )}
-          </motion.div>
-        </AnimatePresence>
-
-        <p className="text-xs text-muted-foreground text-center mt-8">
-          * Session topics and speakers are subject to change as planning is finalized.
-        </p>
+                ))}
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </Tabs>
       </div>
     </section>
   );

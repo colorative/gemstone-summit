@@ -5,46 +5,51 @@ import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 
 const images = [
-  { src: gallery1, alt: "Networking at past Gemstone Lights event" },
-  { src: gallery2, alt: "Group photo of dealer summit attendees" },
-  { src: gallery3, alt: "Keynote presentation on stage" },
-  { src: gallery4, alt: "Hands-on product training workshop" },
+  { src: gallery1, alt: "Networking" },
+  { src: gallery2, alt: "Group Photo" },
+  { src: gallery3, alt: "Keynote" },
+  { src: gallery4, alt: "Workshop" },
 ];
 
 const GallerySection = () => (
-  <section className="py-20 sm:py-28 bg-background">
-    <div className="container max-w-5xl mx-auto px-4">
+  <section id="gallery" className="py-24 sm:py-32 bg-white relative overflow-hidden">
+    <div className="container max-w-7xl mx-auto px-6">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 15 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-12"
+        className="text-center mb-16"
       >
-        <span className="text-sm font-display font-semibold tracking-widest uppercase text-accent">
-          Past Events
-        </span>
-        <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mt-3">
-          Memories from Previous Summits
+        <div className="inline-flex items-center gap-4 text-primary mb-6">
+            <div className="h-[1px] w-8 bg-primary" />
+            <span className="text-[11px] font-medium uppercase tracking-widest font-display text-primary">Memories</span>
+        </div>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-medium text-neutral-900 mt-2 leading-tight uppercase">
+          MOMENTS OF SUCCESS
         </h2>
+        {/* Poppins for body text */}
+        <p className="text-base sm:text-lg text-neutral-600 mt-6 max-w-xl mx-auto font-body font-normal leading-relaxed">
+          See the energy, connections, and breakthroughs from our previous gatherings.
+        </p>
       </motion.div>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {images.map((img, i) => (
           <motion.div
             key={i}
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className="relative overflow-hidden rounded-xl aspect-[4/3] group"
+            className="relative overflow-hidden aspect-[4/5] group border border-neutral-100 rounded-md"
           >
+            {/* Removed hover overlay and text per USER REQUEST */}
             <img
               src={img.src}
               alt={img.alt}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-full object-cover shadow-xl shadow-black/5"
               loading="lazy"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
           </motion.div>
         ))}
       </div>

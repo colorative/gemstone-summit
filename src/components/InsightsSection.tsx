@@ -1,49 +1,45 @@
+import React from "react";
 import { motion } from "framer-motion";
-import { Star, Award, Globe } from "lucide-react";
 
 const stats = [
-  { icon: Globe, value: "200+", label: "Dealers Across North America" },
-  { icon: Star, value: "4 Days", label: "Of World-Class Training" },
-  { icon: Award, value: "30+", label: "Expert-Led Sessions" },
+  { value: "400+", label: "ATTENDEES" },
+  { value: "200+", label: "DEALERSHIPS" },
+  { value: "30+", label: "WORKSHOPS" },
+  { value: "4 DAYS", label: "NETWORKING" },
 ];
 
 const InsightsSection = () => (
-  <section className="py-20 sm:py-24 hero-gradient">
-    <div className="container max-w-4xl mx-auto px-4">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="text-center mb-14"
-      >
-        <span className="text-sm font-display font-semibold tracking-widest uppercase text-accent">
-          By The Numbers
-        </span>
-        <h2 className="text-3xl sm:text-4xl font-display font-bold text-primary-foreground mt-3">
-          Summit at a Glance
-        </h2>
-      </motion.div>
-
-      <div className="grid sm:grid-cols-3 gap-8">
-        {stats.map((s, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.1 }}
-            className="text-center"
-          >
-            <div className="w-14 h-14 rounded-xl gold-gradient mx-auto flex items-center justify-center mb-4 gold-glow">
-              <s.icon className="w-7 h-7 text-accent-foreground" />
+    <section className="bg-neutral-950 py-20 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
+             style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #ffffff 1px, transparent 0)', backgroundSize: '24px 24px' }} 
+        />
+        
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-16">
+            <div className="space-y-4 text-center md:text-left">
+                <div className="inline-flex items-center gap-4 text-primary">
+                    <div className="h-[1px] w-8 bg-primary" />
+                    <span className="text-[10px] font-display font-bold uppercase tracking-[0.4em]">Metrics</span>
+                </div>
+                <h2 className="text-white text-3xl sm:text-4xl font-display font-medium uppercase tracking-tight leading-none">SUCCESS AT SCALE</h2>
             </div>
-            <p className="text-4xl font-display font-bold text-primary-foreground">{s.value}</p>
-            <p className="text-primary-foreground/70 text-sm mt-1">{s.label}</p>
-          </motion.div>
-        ))}
-      </div>
-    </div>
-  </section>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-16 gap-y-12 flex-1 justify-items-center md:justify-items-end">
+                {stats.map((s, i) => (
+                    <motion.div
+                        key={i}
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: i * 0.1 }}
+                        className="space-y-3 text-center group"
+                    >
+                        <p className="text-4xl sm:text-5xl font-display font-medium text-white tracking-widest group-hover:text-primary transition-colors">{s.value}</p>
+                        <p className="text-white/30 text-[9px] uppercase tracking-[0.4em] font-bold font-display group-hover:text-white/60 transition-colors">{s.label}</p>
+                    </motion.div>
+                ))}
+            </div>
+        </div>
+    </section>
 );
 
 export default InsightsSection;
